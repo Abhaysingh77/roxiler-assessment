@@ -136,41 +136,6 @@ const CombinedDashboard = () => {
         </select>
       </div>
 
-      <div className="dashboard-section">
-        <h2>Transaction Statistics</h2>
-        <div className="statistics-box">
-          <div className="statistic-item">
-            <span className="statistic-label">Total sale amount:</span>
-            <span className="statistic-value">{statistics.totalSaleAmount}</span>
-          </div>
-          <div className="statistic-item">
-            <span className="statistic-label">Total sold items:</span>
-            <span className="statistic-value">{statistics.totalSoldItems}</span>
-          </div>
-          <div className="statistic-item">
-            <span className="statistic-label">Total unsold items:</span>
-            <span className="statistic-value">{statistics.totalUnsoldItems}</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="dashboard-section">
-        <h2>Transactions Bar Chart</h2>
-        <div className="chart-container">
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart
-              data={chartData}
-              margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="range" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="count" fill="#40E0D0" />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-      </div>
 
       <div className="dashboard-section">
         <h2>Transaction Table</h2>
@@ -214,6 +179,41 @@ const CombinedDashboard = () => {
             <button onClick={handleNext}>Next</button>
           </div>
           <span>Per Page: {perPage}</span>
+        </div>
+      </div>
+      <div className="dashboard-section">
+        <h2>Transaction Statistics</h2>
+        <div className="statistics-box">
+          <div className="statistic-item">
+            <span className="statistic-label">Total sale amount:</span>
+            <span className="statistic-value">{statistics.totalSaleAmount}</span>
+          </div>
+          <div className="statistic-item">
+            <span className="statistic-label">Total sold items:</span>
+            <span className="statistic-value">{statistics.totalSoldItems}</span>
+          </div>
+          <div className="statistic-item">
+            <span className="statistic-label">Total unsold items:</span>
+            <span className="statistic-value">{statistics.totalUnsoldItems}</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="dashboard-section">
+        <h2>Transactions Bar Chart</h2>
+        <div className="chart-container">
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart
+              data={chartData}
+              margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="range" />
+              <YAxis />
+              <Tooltip />
+              <Bar dataKey="count" fill="#40E0D0" />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       </div>
     </div>
